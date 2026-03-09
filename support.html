@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support / 支持 - TimeLapse</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+      background: #f5f5f7;
+      color: #1d1d1f;
+      line-height: 1.8;
+    }
+    header {
+      background: #fff;
+      border-bottom: 1px solid #e0e0e0;
+      padding: 20px 24px;
+      text-align: center;
+    }
+    header h1 { font-size: 24px; font-weight: 700; }
+    header p  { font-size: 14px; color: #6e6e73; margin-top: 4px; }
+    .lang-switch {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin: 20px 0 0;
+    }
+    .lang-switch button {
+      padding: 6px 18px;
+      border-radius: 20px;
+      border: 1px solid #d0d0d5;
+      background: #fff;
+      cursor: pointer;
+      font-size: 14px;
+      color: #3a3a3c;
+      transition: background .15s, color .15s;
+    }
+    .lang-switch button.active {
+      background: #1d1d1f;
+      color: #fff;
+      border-color: #1d1d1f;
+    }
+    main {
+      max-width: 760px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 16px;
+      padding: 40px 48px;
+      box-shadow: 0 2px 12px rgba(0,0,0,.06);
+    }
+    h2 {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 32px 0 12px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #f0f0f0;
+    }
+    p { margin-bottom: 14px; font-size: 15px; color: #3a3a3c; }
+    ul { margin: 0 0 14px 20px; }
+    ul li { font-size: 15px; color: #3a3a3c; margin-bottom: 6px; }
+    a { color: #0071e3; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .contact-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: #f5f5f7;
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 20px 0;
+    }
+    .contact-card .icon { font-size: 32px; }
+    .contact-card h3 { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+    .contact-card p { margin: 0; font-size: 14px; color: #6e6e73; }
+    .lang-section { display: none; }
+    .lang-section.visible { display: block; }
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+      color: #6e6e73;
+    }
+    @media (max-width: 600px) {
+      main { margin: 16px; padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>TimeLapse</h1>
+  <p>Support / 支持</p>
+  <div class="lang-switch">
+    <button class="active" onclick="switchLang('zh')">中文</button>
+    <button onclick="switchLang('en')">English</button>
+  </div>
+</header>
+
+<main>
+
+  <!-- 中文 -->
+  <div id="zh" class="lang-section visible">
+    <p>感谢使用 <strong>TimeLapse</strong>！如果您遇到问题或有任何建议，欢迎通过以下方式联系我们。</p>
+
+    <h2>联系我们</h2>
+    <div class="contact-card">
+      <div class="icon">🐛</div>
+      <div>
+        <h3>报告问题 / 功能建议</h3>
+        <p><a href="https://github.com/mimimi1225/timetraces/issues" target="_blank">github.com/mimimi1225/timetraces/issues</a></p>
+      </div>
+    </div>
+
+    <h2>常见问题</h2>
+
+    <h2 style="font-size:16px; border:none; margin-top:16px;">导出视频时没有声音？</h2>
+    <p>TimeLapse 的延时视频为图片序列合成，原始帧不含音频，导出视频默认无声音，这是正常现象。</p>
+
+    <h2 style="font-size:16px; border:none; margin-top:16px;">相机权限被拒绝怎么办？</h2>
+    <p>请前往 iPhone「设置」→「TimeLapse」→ 开启「相机」权限，然后重新启动应用。</p>
+
+    <h2 style="font-size:16px; border:none; margin-top:16px;">如何删除某一帧？</h2>
+    <p>在项目编辑页面，长按缩略图可进入多选模式，勾选后点击删除按钮即可。</p>
+
+    <h2 style="font-size:16px; border:none; margin-top:16px;">数据会上传到云端吗？</h2>
+    <p>不会。所有照片和项目数据均仅保存在您的设备本地，不会上传至任何服务器。</p>
+
+    <h2>隐私政策</h2>
+    <p>查看我们的 <a href="privacy-policy.html">隐私政策</a>。</p>
+  </div>
+
+  <!-- English -->
+  <div id="en" class="lang-section">
+    <p>Thank you for using <strong>TimeLapse</strong>! If you encounter any issues or have suggestions, feel free to reach out.</p>
+
+    <h2>Contact Us</h2>
+    <div class="contact-card">
+      <div class="icon">🐛</div>
+      <div>
+        <h3>Report an Issue / Feature Request</h3>
+        <p><a href="https://github.com/mimimi1225/timetraces/issues" target="_blank">github.com/mimimi1225/timetraces/issues</a></p>
+      </div>
+    </div>
+
+    <h2>FAQ</h2>
+
+    <h2 style="font-size:16px; border:none; margin-top:16px;">Why is there no audio in the exported video?</h2>
+    <p>TimeLapse compiles a sequence of photos into a video. Since individual frames don't contain audio, the exported video is silent by default — this is expected behavior.</p>
+
+    <h2 style="font-size:16px; border:none; margin-top:16px;">Camera permission was denied — what should I do?</h2>
+    <p>Go to iPhone <em>Settings → TimeLapse</em> and enable the <strong>Camera</strong> permission, then relaunch the app.</p>
+
+    <h2 style="font-size:16px; border:none; margin-top:16px;">How do I delete a frame?</h2>
+    <p>On the project editing screen, long-press a thumbnail to enter multi-select mode, then select the frames you want to remove and tap the delete button.</p>
+
+    <h2 style="font-size:16px; border:none; margin-top:16px;">Is my data uploaded to the cloud?</h2>
+    <p>No. All photos and project data are stored only on your device and are never sent to any server.</p>
+
+    <h2>Privacy Policy</h2>
+    <p>Read our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+  </div>
+
+</main>
+
+<footer>
+  &copy; 2026 TimeLapse. All rights reserved.
+</footer>
+
+<script>
+  function switchLang(lang) {
+    document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('visible'));
+    document.getElementById(lang).classList.add('visible');
+    document.querySelectorAll('.lang-switch button').forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+  }
+</script>
+
+</body>
+</html>
