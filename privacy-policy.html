@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>隐私政策 - TimeLapse</title>
+  <title>Privacy Policy / 隐私政策 - TimeLapse</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -20,6 +20,27 @@
     }
     header h1 { font-size: 24px; font-weight: 700; }
     header p  { font-size: 14px; color: #6e6e73; margin-top: 4px; }
+    .lang-switch {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin: 20px 0 0;
+    }
+    .lang-switch button {
+      padding: 6px 18px;
+      border-radius: 20px;
+      border: 1px solid #d0d0d5;
+      background: #fff;
+      cursor: pointer;
+      font-size: 14px;
+      color: #3a3a3c;
+      transition: background .15s, color .15s;
+    }
+    .lang-switch button.active {
+      background: #1d1d1f;
+      color: #fff;
+      border-color: #1d1d1f;
+    }
     main {
       max-width: 760px;
       margin: 40px auto;
@@ -47,6 +68,8 @@
       font-size: 13px;
       color: #6e6e73;
     }
+    .lang-section { display: none; }
+    .lang-section.visible { display: block; }
     @media (max-width: 600px) {
       main { margin: 16px; padding: 24px 20px; }
     }
@@ -56,67 +79,133 @@
 
 <header>
   <h1>TimeLapse</h1>
-  <p>隐私政策</p>
+  <p>Privacy Policy / 隐私政策</p>
+  <div class="lang-switch">
+    <button class="active" onclick="switchLang('zh')">中文</button>
+    <button onclick="switchLang('en')">English</button>
+  </div>
 </header>
 
 <main>
-  <p class="updated">最后更新日期：2026 年 3 月 10 日</p>
 
-  <p>
-    欢迎使用 <strong>TimeLapse</strong>（以下简称"本应用"）。我们非常重视您的隐私，本隐私政策旨在说明本应用如何收集、使用及保护您的个人信息。在使用本应用前，请仔细阅读本政策。
-  </p>
+  <!-- 中文 -->
+  <div id="zh" class="lang-section visible">
+    <p class="updated">最后更新日期：2026 年 3 月 10 日</p>
 
-  <h2>1. 信息收集</h2>
-  <p>本应用为纯本地运行的工具类应用，<strong>不会收集任何个人身份信息</strong>，也不会向任何服务器发送您的数据。</p>
-  <p>本应用在设备本地处理或存储以下内容：</p>
-  <ul>
-    <li><strong>相机数据</strong>：用于拍摄延时照片，照片仅保存在您的设备本地。</li>
-    <li><strong>相册数据</strong>：用于保存导出的视频、Live Photo 或 GIF 至您的照片库，以及在您主动选择时从相册导入照片。</li>
-    <li><strong>项目数据</strong>：包括项目名称、帧序列、设置等，仅存储在您的设备本地。</li>
-  </ul>
+    <p>
+      欢迎使用 <strong>TimeLapse</strong>（以下简称"本应用"）。我们非常重视您的隐私，本隐私政策旨在说明本应用如何收集、使用及保护您的个人信息。在使用本应用前，请仔细阅读本政策。
+    </p>
 
-  <h2>2. 权限说明</h2>
-  <p>本应用会请求以下系统权限，所有权限均用于实现核心功能，不用于其他目的：</p>
-  <ul>
-    <li><strong>相机</strong>：拍摄延时照片。</li>
-    <li><strong>麦克风</strong>：录制视频时采集音频（如需）。</li>
-    <li><strong>照片库（读取）</strong>：从相册导入照片。</li>
-    <li><strong>照片库（写入）</strong>：将导出的成品保存至相册。</li>
-  </ul>
-  <p>您可随时在 iPhone「设置」→「TimeLapse」中管理以上权限。</p>
+    <h2>1. 信息收集</h2>
+    <p>本应用为纯本地运行的工具类应用，<strong>不会收集任何个人身份信息</strong>，也不会向任何服务器发送您的数据。</p>
+    <p>本应用在设备本地处理或存储以下内容：</p>
+    <ul>
+      <li><strong>相机数据</strong>：用于拍摄延时照片，照片仅保存在您的设备本地。</li>
+      <li><strong>相册数据</strong>：用于保存导出的视频、Live Photo 或 GIF 至您的照片库，以及在您主动选择时从相册导入照片。</li>
+      <li><strong>项目数据</strong>：包括项目名称、帧序列、设置等，仅存储在您的设备本地。</li>
+    </ul>
 
-  <h2>3. 数据共享</h2>
-  <p>
-    本应用<strong>不会</strong>将您的任何数据共享给第三方，包括广告商、数据分析商或其他任何第三方服务。本应用不包含任何第三方 SDK 或追踪代码。
-  </p>
+    <h2>2. 权限说明</h2>
+    <p>本应用会请求以下系统权限，所有权限均用于实现核心功能，不用于其他目的：</p>
+    <ul>
+      <li><strong>相机</strong>：拍摄延时照片。</li>
+      <li><strong>麦克风</strong>：录制视频时采集音频（如需）。</li>
+      <li><strong>照片库（读取）</strong>：从相册导入照片。</li>
+      <li><strong>照片库（写入）</strong>：将导出的成品保存至相册。</li>
+    </ul>
+    <p>您可随时在 iPhone「设置」→「TimeLapse」中管理以上权限。</p>
 
-  <h2>4. 数据安全</h2>
-  <p>
-    由于所有数据均存储在您的设备本地，数据安全性取决于您设备自身的安全设置（如 Face ID / Touch ID、设备密码）。我们建议您及时更新系统并妥善保管设备。
-  </p>
+    <h2>3. 数据共享</h2>
+    <p>
+      本应用<strong>不会</strong>将您的任何数据共享给第三方，包括广告商、数据分析商或其他任何第三方服务。本应用不包含任何第三方 SDK 或追踪代码。
+    </p>
 
-  <h2>5. 儿童隐私</h2>
-  <p>
-    本应用不针对 13 岁以下儿童，也不会有意收集儿童的个人信息。
-  </p>
+    <h2>4. 数据安全</h2>
+    <p>
+      由于所有数据均存储在您的设备本地，数据安全性取决于您设备自身的安全设置（如 Face ID / Touch ID、设备密码）。我们建议您及时更新系统并妥善保管设备。
+    </p>
 
-  <h2>6. 隐私政策变更</h2>
-  <p>
-    我们可能会不时更新本隐私政策。更新后的政策将在本页发布，并注明最新修订日期。建议您定期查阅本页面以了解最新内容。
-  </p>
+    <h2>5. 儿童隐私</h2>
+    <p>本应用不针对 13 岁以下儿童，也不会有意收集儿童的个人信息。</p>
 
-  <h2>7. 联系我们</h2>
-  <p>
-    如您对本隐私政策有任何疑问或建议，欢迎通过以下方式联系我们：
-  </p>
-  <ul>
-    <li>GitHub Issues：<a href="https://github.com/mimimi1225/timetraces/issues" target="_blank">github.com/mimimi1225/timetraces/issues</a></li>
-  </ul>
+    <h2>6. 隐私政策变更</h2>
+    <p>
+      我们可能会不时更新本隐私政策。更新后的政策将在本页发布，并注明最新修订日期。建议您定期查阅本页面以了解最新内容。
+    </p>
+
+    <h2>7. 联系我们</h2>
+    <p>如您对本隐私政策有任何疑问或建议，欢迎通过以下方式联系我们：</p>
+    <ul>
+      <li>GitHub Issues：<a href="https://github.com/mimimi1225/timetraces/issues" target="_blank">github.com/mimimi1225/timetraces/issues</a></li>
+    </ul>
+  </div>
+
+  <!-- English -->
+  <div id="en" class="lang-section">
+    <p class="updated">Last updated: March 10, 2026</p>
+
+    <p>
+      Welcome to <strong>TimeLapse</strong> ("the App"). We take your privacy seriously. This Privacy Policy explains how the App handles your information. Please read it carefully before using the App.
+    </p>
+
+    <h2>1. Information We Collect</h2>
+    <p>TimeLapse is a fully offline, on-device tool. <strong>We do not collect any personally identifiable information</strong> and do not transmit any data to external servers.</p>
+    <p>The following data is processed or stored locally on your device only:</p>
+    <ul>
+      <li><strong>Camera data</strong>: Photos captured for time-lapse sequences are stored only on your device.</li>
+      <li><strong>Photo library data</strong>: Used to save exported videos, Live Photos, or GIFs to your library, and to import photos when you explicitly choose to do so.</li>
+      <li><strong>Project data</strong>: Project names, frame sequences, and settings are stored locally on your device.</li>
+    </ul>
+
+    <h2>2. Permissions</h2>
+    <p>The App requests the following system permissions solely to provide its core features:</p>
+    <ul>
+      <li><strong>Camera</strong>: To capture time-lapse photos.</li>
+      <li><strong>Microphone</strong>: To record audio when exporting video (if applicable).</li>
+      <li><strong>Photo Library (Read)</strong>: To import photos from your library.</li>
+      <li><strong>Photo Library (Write)</strong>: To save exported content to your library.</li>
+    </ul>
+    <p>You can manage these permissions at any time in iPhone <em>Settings → TimeLapse</em>.</p>
+
+    <h2>3. Data Sharing</h2>
+    <p>
+      We <strong>do not</strong> share your data with any third parties, including advertisers, analytics providers, or any other external services. The App contains no third-party SDKs or tracking code.
+    </p>
+
+    <h2>4. Data Security</h2>
+    <p>
+      All data remains on your device. Its security depends on your device's own security settings (e.g., Face ID / Touch ID, passcode). We recommend keeping your device and operating system up to date.
+    </p>
+
+    <h2>5. Children's Privacy</h2>
+    <p>The App is not directed at children under the age of 13, and we do not knowingly collect personal information from children.</p>
+
+    <h2>6. Changes to This Policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time. Any changes will be posted on this page with a revised "Last updated" date. We encourage you to review this page periodically.
+    </p>
+
+    <h2>7. Contact Us</h2>
+    <p>If you have any questions or suggestions about this Privacy Policy, please reach out:</p>
+    <ul>
+      <li>GitHub Issues: <a href="https://github.com/mimimi1225/timetraces/issues" target="_blank">github.com/mimimi1225/timetraces/issues</a></li>
+    </ul>
+  </div>
+
 </main>
 
 <footer>
   &copy; 2026 TimeLapse. All rights reserved.
 </footer>
+
+<script>
+  function switchLang(lang) {
+    document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('visible'));
+    document.getElementById(lang).classList.add('visible');
+    document.querySelectorAll('.lang-switch button').forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+  }
+</script>
 
 </body>
 </html>
